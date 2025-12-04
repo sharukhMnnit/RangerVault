@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+.env
+
+# Android
+.gradle/
+local.properties
+.idea/
+build/
+app/build/
+*.iml

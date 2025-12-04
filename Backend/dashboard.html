@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RangerVault Sentinel Dashboard</title>
+    <style>
+        body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 20px; }
+        h1 { color: #00e676; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #333; }
+        th { background-color: #1f1f1f; color: #00e676; }
+        .GRANTED { color: #00e676; font-weight: bold; }
+        .DENIED { color: #ff1744; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>⚡ RANGERVAULT SENTINEL VIEW ⚡</h1>
+    
+    <table id="logTable">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Ranger ID</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="logBody">
+            </tbody>
+    </table>
+
+    <script>
+        async function fetchLogs() {
+            try {
+                // CHANGE THIS IP if opening on a different device
+                const response = await fetch('http://localhost:3000/api/logs');
+                const logs = await response.json();
+                
+                const tbody = document.getElementById('logBody');
+                tbody.innerHTML = ''; // Clear old logs
+
+                logs.forEach(log => {
+                    const row = `<tr>
+                        <td>${log.time}</td>
+                        <td>${log.userId}</td>
+                        <td class="${log.status}">${log.status}</td>
+                    </tr>`;
+                    tbody.innerHTML += row;
+                });
+            } catch (e) { console.error("Error fetching logs"); }
+        }
+
+        // Refresh every 2 seconds
+        setInterval(fetchLogs, 2000);
+        fetchLogs();
+    </script>
+
+</body>
+</html>
