@@ -40,14 +40,33 @@ android {
 }
 
 dependencies {
+    //adding biometric
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.biometric:biometric:1.1.0")
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
-    // Networking (To talk to Node.js)
+    //Location - Vibhu
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+
+    // QR Tools
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("com.google.zxing:core:3.4.1")
+
+    // Networking
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-    // QR Code Generation
-    implementation("com.google.zxing:core:3.5.1")
-    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    // Icons
+    implementation("androidx.compose.material:material-icons-extended:1.6.0")
+
+//    // Networking (To talk to Node.js)
+//    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+//    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+//    // QR Code Generation
+//    implementation("com.google.zxing:core:3.5.1")
+//    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -57,6 +76,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
