@@ -18,6 +18,22 @@ The system consists of two parts:
 
 ---
 
+## 📸 App Glimpse
+
+<p align="center">
+  <img src="ImagesOfOurApp/Login_Screen.jpeg" width="200" alt="Identity Login" />
+  <img src="ImagesOfOurApp/Generating_QR_Screen.jpeg" width="200" alt="Generate Token" />
+  <img src="ImagesOfOurApp/QR.jpeg" width="200" alt="Secure QR" />
+</p>
+
+<p align="center">
+  <img src="ImagesOfOurApp/Scanner_Screen.jpeg" width="200" alt="Scanner View" />
+  <img src="ImagesOfOurApp/Dashboard.jpeg" width="200" alt="Commander Dashboard" />
+  <img src="ImagesOfOurApp/1_QR_Generated_Location.jpeg" width="200" alt="Geo Logs" />
+</p>
+
+> **Visual Flow:** Agent Login ➔ Token Generation ➔ Verification Scanning ➔ Live Field Logging
+
 ## 🚀 Key Features
 
 * **🔐 Zero-Trust Architecture:** Every scan is treated as hostile until cryptographically proven valid.
