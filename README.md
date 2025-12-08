@@ -103,55 +103,70 @@ com.example.rangervault
 ```
 
 
-## 🔌 API Documentation
+## 🚨 API Documentation
 
-1. Generate Identity
-Endpoint: POST /api/generate-identity
+## 1. Generate Identity Endpoint  
+**POST** `/api/generate-identity`
 
-Purpose: Returns a signed token for the user.
+**Purpose:**  
+Returns a signed token for the user.
 
-Body: { "userId": "Agent007", "role": "Ranger", "deviceId": "android_id_123" }
+**Body:**
+```json
+{ 
+  "userId": "Agent007", 
+  "role": "Ranger", 
+  "deviceId": "android_id_123" 
+}
+```
 
-Response: { "payload": "Agent007|Ranger|170123456", "signature": "Base64String..." }
+**Response:**
+```json
+{
+    "payload": "Agent007|Ranger|170123456",
+    "signature": "Base64String..."
+}
+```
 
-2. Log Entry
-Endpoint: POST /api/log-entry
+##2. Log Entry Endpoint:
+**POST ** `/api/log-entry`
 
-Purpose: Syncs offline scan logs to the server when internet is available.
+**Purpose:** 
+Syncs offline scan logs to the server when internet is available.
 
-Body: { "userId": "Agent007", "status": "GRANTED", "lat": 28.5, "lng": 77.2 }
+**Body:** 
+```json
+{
+    "userId": "Agent007",
+    "status": "GRANTED",
+    "lat": 28.5, "lng": 77.2
+}
+```
 
-⚙️ Setup Instructions
-Prerequisites
-Android Studio Ladybug (or newer)
+##⚙️ Setup Instructions
+**Prerequisites**
+1. Android Studio Ladybug (or newer)
+2. Node.js & NPM
+3. Physical Android Device (Recommended for Camera/Biometrics)
 
-Node.js & NPM
-
-Physical Android Device (Recommended for Camera/Biometrics)
-
-Step 1: Backend Setup (The Authority)
-Bash
-
+**Step 1: Backend Setup (The Authority)**
+```Bash
 cd backend
 npm install
 # Generate the keys (Critical Step)
 node keygen.js
 # Start the server
 node index.js
-Output: Server running on Port 3000.
+```
 
 Note: Copy the content of public.pem generated here into OfflineVerifier.kt in the Android app.
 
-Step 2: Android App Setup
-Open the project in Android Studio.
+**Step 2: Android App Setup**
 
-Navigate to data/remote/NetworkClient.kt.
-
-Update BASE_URL to your laptop's IP address (e.g., http://192.168.1.5:3000) or your deployed URL.
-
-Sync Gradle and Run on device.
-
-
+1. Open the project in Android Studio.
+2. Navigate to `data/remote/NetworkClient.kt`.
+3. Update BASE_URL to your laptop's IP address (e.g., http://192.168.1.5:3000) or your deployed URL.
+4. Sync Gradle and Run on device.
 
 ##🛡️ Error Handling & Reliability
 
