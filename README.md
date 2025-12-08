@@ -103,7 +103,7 @@ com.example.rangervault
 ```
 
 
-## 🚨 API Documentation
+# 🚨 API Documentation
 
 ## 1. Generate Identity Endpoint  
 **POST** `/api/generate-identity`
@@ -128,10 +128,10 @@ Returns a signed token for the user.
 }
 ```
 
-##2. Log Entry Endpoint:
-**POST ** `/api/log-entry`
+## 2. Log Entry Endpoint:
+**POST**  `/api/log-entry`
 
-**Purpose:** 
+**Purpose:**
 Syncs offline scan logs to the server when internet is available.
 
 **Body:** 
@@ -143,7 +143,7 @@ Syncs offline scan logs to the server when internet is available.
 }
 ```
 
-##⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 **Prerequisites**
 1. Android Studio Ladybug (or newer)
 2. Node.js & NPM
@@ -168,7 +168,7 @@ Note: Copy the content of public.pem generated here into OfflineVerifier.kt in t
 3. Update BASE_URL to your laptop's IP address (e.g., http://192.168.1.5:3000) or your deployed URL.
 4. Sync Gradle and Run on device.
 
-##🛡️ Error Handling & Reliability
+## 🛡️ Error Handling & Reliability
 
 1. Network Failure: The Scanner verifies signatures locally using the Public Key. No API call is needed to grant access.
 2. Cloning Attacks: The QR code includes a deviceId. If the scanned device ID doesn't match the registered ID, access is denied.
