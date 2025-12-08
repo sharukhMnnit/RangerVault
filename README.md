@@ -72,17 +72,20 @@ sequenceDiagram
 
 ```
 
-## 📂Folder Structure
+## 📂 Folder Structure
 
+We strictly follow the **MVVM** (Model-View-ViewModel) pattern to ensure separation of concerns and maintainability.
+
+```text
 com.example.rangervault
 │
 ├── data                  # DATA LAYER (Single Source of Truth)
-│   ├── model             # Data Classes (GeoLogEntry, IdentityRequest)
+│   ├── model             # Data Classes (e.g., GeoLogEntry, IdentityRequest)
 │   ├── remote            # Retrofit Service & API Interfaces
-│   └── repository        # RangerRepository (Handles data logic)
+│   └── repository        # RangerRepository (Handles data logic & storage)
 │
 ├── utils                 # HELPER LAYER
-│   ├── CryptoUtils.kt    # OfflineVerifier (RSA Logic)
+│   ├── CryptoUtils.kt    # OfflineVerifier (RSA Asymmetric Logic)
 │   └── QrUtils.kt        # QR Generation & Camera handling
 │
 ├── viewmodel             # STATE LAYER
@@ -90,13 +93,15 @@ com.example.rangervault
 │
 ├── ui                    # UI LAYER (Jetpack Compose)
 │   ├── theme             # Custom Dark Theme (Ranger Gold/Black)
-│   └── screens           # Individual Screens
+│   └── screens           # Individual Composable Screens
 │       ├── LockScreen.kt
 │       ├── LoginScreen.kt
 │       ├── ScannerScreen.kt
 │       └── ResultScreen.kt
 │
-└── MainActivity.kt       # Entry Point & Hardware Linking
+└── MainActivity.kt       # Entry Point & Hardware Linking (Camera, GPS, Biometrics)
+```
+
 
 ## 🔌 API Documentation
 
