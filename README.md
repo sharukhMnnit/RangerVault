@@ -20,18 +20,26 @@ The system consists of two parts:
 
 ## 📸 App Glimpse
 
+### The Agent Flow
 | **Identity Login** | **Token Generation** | **Secure QR** |
 |:---:|:---:|:---:|
 | <img src="ImagesOfOurApp/Login_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/Generating_QR_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/QR.jpeg" width="200"> |
 
 <br>
 
-| **Scanner View** | **Commander Dashboard** | **Geo Logs** |
+### The Gatekeeper Flow
+| **Scanner View** | **Access Granted** | **Access Denied** |
 |:---:|:---:|:---:|
-| <img src="ImagesOfOurApp/Scanner_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/Dashboard.jpeg" width="200"> | <img src="ImagesOfOurApp/1_QR_Generated_Location.jpeg" width="200"> |
+| <img src="ImagesOfOurApp/Scanner_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/AccessGranted.jpg" width="200"> | <img src="ImagesOfOurApp/AccessDenied.jpg" width="200"> |
 
-> **Visual Flow:** Agent Login ➔ Token Generation ➔ Verification Scanning ➔ Live Field Logging
+<br>
 
+### Admin & Logs
+| **Commander Dashboard** | **Geo Logs** |
+|:---:|:---:|
+| <img src="ImagesOfOurApp/Dashboard.jpeg" width="200"> | <img src="ImagesOfOurApp/1_QR_Generated_Location.jpeg" width="200"> |
+
+> **Visual Flow:** Agent Login ➔ Token Generation ➔ Verification Scanning (Granted/Denied) ➔ Live Field Logging
 ## 🚀 Key Features
 
 * **🔐 Zero-Trust Architecture:** Every scan is treated as hostile until cryptographically proven valid.
