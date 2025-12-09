@@ -30,6 +30,26 @@ The system consists of two parts:
 ### The Gatekeeper Flow
 | **Scanner View** | **Access Granted** | **Access Denied** |
 |:---:|:---:|:---:|
+| <img src="ImagesOfOurApp/Scanner_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/AccessGranted.jpeg" width="200"> | <img src="ImagesOfOurApp/AccessDenied.jpeg" width="200"> |
+
+<br>
+
+### Admin & Logs
+| **Commander Dashboard** | **Geo Logs** |
+|:---:|:---:|
+| <img src="ImagesOfOurApp/Dashboard.jpeg" width="200"> | <img src="ImagesOfOurApp/1_QR_Generated_Location.jpeg" width="200"> |
+
+> **Visual Flow:** Agent Login ➔ Token Generation ➔ Verification Scanning (Granted/Denied) ➔ Live Field Logging
+### The Agent Flow
+| **Identity Login** | **Token Generation** | **Secure QR** |
+|:---:|:---:|:---:|
+| <img src="ImagesOfOurApp/Login_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/Generating_QR_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/QR.jpeg" width="200"> |
+
+<br>
+
+### The Gatekeeper Flow
+| **Scanner View** | **Access Granted** | **Access Denied** |
+|:---:|:---:|:---:|
 | <img src="ImagesOfOurApp/Scanner_Screen.jpeg" width="200"> | <img src="ImagesOfOurApp/AccessGranted.jpg" width="200"> | <img src="ImagesOfOurApp/AccessDenied.jpg" width="200"> |
 
 <br>
